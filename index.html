@@ -78,7 +78,7 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .r-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;}
 .r-cell{background:rgba(5,7,8,.8);border:1px solid rgba(0,255,102,.15);padding:14px;text-align:center;}
 .r-cell-val{font-family:var(--head);font-size:28px;line-height:1;margin-bottom:4px;}
-.r-cell-label{font-family:var(--mono);font-size:7px;letter-spacing:1px;color:rgba(232,248,238,.3);}
+.r-cell-label{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.5px;color:rgba(232,248,238,.65);text-transform:uppercase;}
 .weeks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;}
 .week-card{background:rgba(0,255,102,.03);border:1px solid rgba(0,255,102,.1);padding:16px;}
 .wc-label{font-family:var(--mono);font-size:8px;letter-spacing:2px;color:var(--amber);margin-bottom:6px;}
@@ -142,7 +142,7 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
     <div class="intro-content">
       <div class="intro-eyebrow">SY0-701 EXAM READINESS SYSTEM</div>
       <div class="intro-title">SECURITY<span>+</span><br>STUDY<br>GUIDE</div>
-      <p class="intro-sub">12 questions about where you actually are. A study plan built around your answers. <strong>No generic advice.</strong></p>
+      <p class="intro-sub">Answer 12 quick questions. Get a study plan built for your situation.</p>
       <button class="intro-btn" onclick="startQuiz()"><span>BEGIN DIAGNOSTIC</span></button>
     </div>
     <div style="position:fixed;bottom:80px;right:24px;font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(0,255,102,.35);letter-spacing:1px;z-index:20;text-align:right;line-height:1.8;animation:fadeIn 1s ease 2.5s both">90 QUESTIONS / 90 MINUTES<br>PASSING SCORE: 750/900<br>SY0-701 // CURRENT VERSION</div>
@@ -477,7 +477,7 @@ const PLANS={
       ]},
       {l:'WKS 5–6 — ARCHITECTURE (18%)',f:'Network and cloud security fundamentals',ts:[
         'Domain 3 — network segmentation, VLANs, DMZ, zero trust architecture, cloud security models (IaaS/PaaS/SaaS), secure protocols, PKI basics.',
-        'Hands-on: set up a free TryHackMe account and complete the Pre-Security path. Understanding how networks actually work is the difference between memorizing and understanding.',
+        'Hands on: set up a free TryHackMe account and complete the Pre-Security path. Understanding how networks actually work is the difference between memorizing and understanding.',
         'Do harden a Windows VM lab: configure local policies, disable unnecessary services, review event logs. These are PBQ territory.',
         'First timed mini-exam: 30 questions in 25 minutes covering Domains 2 and 3. Track wrong answers by objective, not just domain.',
       ]},
@@ -508,12 +508,12 @@ const PLANS={
       {p:'',t:'<strong>End of Week 11:</strong> Three consecutive practice exams at 80%+, no single domain below 70%. That pattern — not one good day — is the readiness signal.'},
       {p:'amber',t:'<strong>Exam day:</strong> Flag PBQs immediately and skip them. Answer all multiple choice first. Return to PBQs with remaining time. Partial credit on a PBQ beats zero — do not leave them blank.'},
     ],
-    warn:'<strong>Common mistake:</strong> Starting practice exams before you have the vocabulary. Wrong answers only teach you something when you understand why they are wrong. Build the foundation first.',
+    warn:'<strong>Common mistake:</strong> Starting practice exams before you have the vocabulary. Wrong answers only teach you something when you understand why they are wrong. Get the foundation solid first.',
     resources:[
       {label:'FREE VIDEO',name:'Professor Messer SY0-701',url:'https://www.professormesser.com/sy0-701-certification-course/',note:'121 videos, 15+ hours, free — organized by exam objective. Start here.'},
       {label:'FREE PRACTICE',name:'Josh Madakor 1,561 Questions + Anki',url:'https://lognpacific.com/free-certification-practice-tests/free-security-sy0-701-practice-questions/',note:'Free questions and free Anki deck download — use the Anki deck from Day 1'},
       {label:'FREE PRACTICE',name:'Crucial Exams',url:'https://crucialexams.com/exams/comptia/security/sy0-701/',note:'1,400 questions with domain filtering — add in Week 7 onwards'},
-      {label:'FREE HANDS-ON',name:'TryHackMe',url:'https://tryhackme.com',note:'Free tier — Pre-Security path builds hands-on grounding for PBQs'},
+      {label:'FREE HANDS ON',name:'TryHackMe',url:'https://tryhackme.com',note:'Free tier — Pre-Security path builds hands on grounding for PBQs'},
       {label:'COMMUNITY',name:'r/CompTIA',url:'https://reddit.com/r/CompTIA',note:'Weekly threads, real pass stories, study groups'},
       {label:'PAID OPTIONAL',name:'Jason Dion Udemy Course',url:'https://www.udemy.com/course/securityplus/',note:'Best paid video option — wait for Udemy sale, usually under $20'},
     ],
@@ -538,14 +538,14 @@ const PLANS={
       ]},
       {l:'WKS 4–5 — THREATS AND ARCHITECTURE',f:'These two domains = 40% of the exam combined',ts:[
         'Domain 2 (Threats, 22%) and Domain 3 (Architecture, 18%) together are 40% of your score. Do not underweight them because you know some of this from IT work.',
-        'Hands-on labs: TryHackMe Junior Penetration Tester path covers real attack and defense scenarios. Understanding attacks from both sides makes the questions click differently.',
+        'Hands on labs: TryHackMe Junior Penetration Tester path covers real attack and defense scenarios. Understanding attacks from both sides makes the questions click differently.',
         'Weekly full timed practice exam — 90 questions, 90 minutes. Log domain scores in a spreadsheet and track the trend, not just the number.',
         'PBQ practice begins: firewall ACL configuration, network diagram security analysis, identifying attack types from log output. CyberkraftYT has a free PBQ walkthrough series on YouTube.',
       ]},
       {l:'WKS 6–7 — OPERATIONS AND GRC',f:'Security Operations is 28% — do not underestimate it',ts:[
-        'Domain 4 (28%): incident response lifecycle, SIEM and log analysis, digital forensics, threat hunting, vulnerability scanning. This domain rewards hands-on understanding.',
+        'Domain 4 (28%): incident response lifecycle, SIEM and log analysis, digital forensics, threat hunting, vulnerability scanning. This domain rewards hands on understanding.',
         'Domain 5 (20%): risk frameworks, data governance, compliance requirements, vendor management. Know NIST CSF, understand what GDPR and HIPAA require at a conceptual level.',
-        'PBQ practice daily — minimum 15 minutes of hands-on simulation. Incident response sequencing and log analysis are the two most common PBQ types.',
+        'PBQ practice daily — minimum 15 minutes of hands on simulation. Incident response sequencing and log analysis are the two most common PBQ types.',
         'Rework any objective where you miss 30%+ of practice questions. One wrong answer is noise. Three wrong answers on the same objective is a gap.',
       ]},
       {l:'WKS 8–9 — CONSOLIDATION',f:'Execution, not more content',ts:[
@@ -561,12 +561,12 @@ const PLANS={
       {p:'',t:'<strong>End of Week 9:</strong> Three consecutive exams at 82%+, no single domain below 70%. Book the exam when you hit this pattern.'},
       {p:'amber',t:'<strong>Exam day:</strong> PBQs appear first in the exam. Flag them immediately, complete all MCQs, then return. Time-box each PBQ — do not let one drag. Partial credit is available on PBQs, so answer what you can even if you cannot finish.'},
     ],
-    warn:'<strong>Common mistake:</strong> Spending extra time on domains you already know because it feels productive. Every domain needs to pass — strength in one area does not offset weakness in another.',
+    warn:'<strong>Common mistake:</strong> Spending extra time on domains you already know because it feels productive. Every domain needs to pass — strength in one area does not make up for weakness in another.',
     resources:[
       {label:'FREE VIDEO',name:'Professor Messer SY0-701',url:'https://www.professormesser.com/sy0-701-certification-course/',note:'Skip domains you already know — target gaps only using the objective map'},
       {label:'FREE PRACTICE',name:'Crucial Exams',url:'https://crucialexams.com/exams/comptia/security/sy0-701/',note:'Custom domain exams — use this for your Week 1 baseline and ongoing tracking'},
-      {label:'FREE PRACTICE',name:'Josh Madakor + Anki Deck',url:'https://lognpacific.com/free-certification-practice-tests/free-security-sy0-701-practice-questions/',note:'Free Anki deck — 10 minutes daily review is non-negotiable for this plan'},
-      {label:'FREE HANDS-ON',name:'TryHackMe',url:'https://tryhackme.com',note:'SOC Level 1 path and scenario rooms for PBQ practice'},
+      {label:'FREE PRACTICE',name:'Josh Madakor + Anki Deck',url:'https://lognpacific.com/free-certification-practice-tests/free-security-sy0-701-practice-questions/',note:'Free Anki deck — 10 minutes daily review is part of this plan'},
+      {label:'FREE HANDS ON',name:'TryHackMe',url:'https://tryhackme.com',note:'SOC Level 1 path and scenario rooms for PBQ practice'},
       {label:'FREE YOUTUBE',name:'Cyber James Security+',url:'https://www.youtube.com/results?search_query=cyber+james+security+plus',note:'Teaches elimination technique for tricky questions — worth several percentage points'},
       {label:'PAID RECOMMENDED',name:'Jason Dion Practice Exams',url:'https://www.udemy.com/course/comptia-security-sy0-701-practice-exams/',note:'540 questions, 6 full timed exams — buy on Udemy sale for under $15'},
     ],
@@ -609,11 +609,11 @@ const PLANS={
       {p:'',t:'<strong>End of Week 7:</strong> No domain below 72% in any practice exam. Three exams above 82% before booking the real attempt. Book only when the pattern is consistent.'},
       {p:'amber',t:'<strong>Exam day — PBQ strategy:</strong> PBQs appear first. Flag them, complete all MCQs, then return. Partial answers get partial credit. Do not leave PBQs blank even if you cannot fully complete them.'},
     ],
-    warn:'<strong>Retaker trap:</strong> Studying harder using the same method that already failed. The gap is almost always in application under exam conditions and PBQs — not content knowledge. Change the method before adding more hours.',
+    warn:'<strong>Retaker trap:</strong> Studying harder using the same method that already failed. The problem is usually application under exam conditions and PBQs — not content knowledge. Change the method before adding more hours.',
     resources:[
       {label:'FREE DIAGNOSTIC',name:'Crucial Exams',url:'https://crucialexams.com/exams/comptia/security/sy0-701/',note:'Take your Week 1 fresh baseline here — this number determines everything that follows'},
       {label:'FREE VIDEO',name:'Professor Messer SY0-701',url:'https://www.professormesser.com/sy0-701-certification-course/',note:'Targeted use only — watch only the domains where you are failing'},
-      {label:'FREE HANDS-ON',name:'TryHackMe',url:'https://tryhackme.com',note:'PBQ scenario practice — this is where most retakers actually fail'},
+      {label:'FREE HANDS ON',name:'TryHackMe',url:'https://tryhackme.com',note:'PBQ scenario practice — this is where most retakers actually fail'},
       {label:'FREE YOUTUBE',name:'Cyber James Security+',url:'https://www.youtube.com/results?search_query=cyber+james+security+plus',note:'Elimination technique — specifically helpful for retakers who know the material but miss scenario questions'},
       {label:'COMMUNITY',name:'r/CompTIA Retaker Threads',url:'https://reddit.com/r/CompTIA',note:'Read second-attempt pass stories — specific fixes from real candidates who failed once'},
       {label:'PAID RECOMMENDED',name:'Jason Dion Practice Exams',url:'https://www.udemy.com/course/comptia-security-sy0-701-practice-exams/',note:'Different question pool from most free resources — critical for retakers to avoid pattern memorization'},
@@ -650,11 +650,11 @@ const PLANS={
       {p:'',t:'<strong>End of Week 4:</strong> 80%+ on two consecutive full exams before entering the final push.'},
       {p:'',t:'<strong>Book when:</strong> 83%+ on three consecutive exams. No domain below 72%. That is the pattern, not one good score.'},
     ],
-    warn:'<strong>Sprint candidate mistake:</strong> Underestimating performance-based questions. Your experience means you know the concepts — but PBQs test application under time pressure in an unfamiliar interface. They are 25% of your score.',
+    warn:'<strong>Sprint candidate mistake:</strong> Underestimating performance-based questions. Your experience means you know the concepts — but PBQs test application under time pressure in an unfamiliar interface. They make up 25% of your score.',
     resources:[
       {label:'FREE PRACTICE',name:'Crucial Exams',url:'https://crucialexams.com/exams/comptia/security/sy0-701/',note:'Your primary baseline and domain tracking tool for the sprint'},
       {label:'FREE PRACTICE',name:'ExamCompass',url:'https://www.examcompass.com/',note:'Secondary free question pool — use in final week for variety'},
-      {label:'FREE HANDS-ON',name:'TryHackMe',url:'https://tryhackme.com',note:'PBQ prep — scenario labs relevant to Security+ hands-on questions'},
+      {label:'FREE HANDS ON',name:'TryHackMe',url:'https://tryhackme.com',note:'PBQ prep — scenario labs relevant to Security+ hands-on questions'},
       {label:'FREE YOUTUBE',name:'Cyber James Security+',url:'https://www.youtube.com/results?search_query=cyber+james+security+plus',note:'Elimination technique worth 5 to 8 percentage points for many sprint candidates'},
       {label:'FREE ANKI',name:'Josh Madakor Anki Deck',url:'https://lognpacific.com/free-certification-practice-tests/free-security-sy0-701-practice-questions/',note:'10 minutes daily — keeps everything sharp through the sprint weeks'},
       {label:'PAID RECOMMENDED',name:'Jason Dion Practice Exams',url:'https://www.udemy.com/course/comptia-security-sy0-701-practice-exams/',note:'Second question pool is essential for sprinters — do not rely on one source'},
@@ -662,14 +662,14 @@ const PLANS={
   },
   steady:{
     tag:'PLAN E',name:'Steady State',
-    desc:'Under 8 hours per week available. The material is completely learnable at this pace but the single biggest risk is consistency drift — letting days between sessions stretch into weeks. Spaced repetition only works if the spacing stays in days, not weeks.',
+    desc:'Under 8 hours per week available. You can learn the material at this pace but the biggest risk is consistency drift — letting days between sessions stretch into weeks. Spaced repetition only works if the spacing stays in days, not weeks.',
     cells:[{val:'12–16',label:'WEEKS',col:'#FFAA00'},{val:'4–7',label:'HRS/WEEK',col:'#FFAA00'},{val:'Consistency',label:'KEY FACTOR',col:'#00FF66'},{val:'Sustainable',label:'APPROACH',col:'#00FF66'}],
     domains:[40,30,35,25,45],
     weeks:[
       {l:'PHASE 1: WKS 1–5 — CONTENT',f:'Sustainable pace, one domain at a time',ts:[
         'Download the SY0-701 exam objectives PDF from CompTIA.org. Print it. Every topic on this document is testable. Every topic not on it is not. This replaces all study guides as your master checklist.',
-        'Professor Messer\'s free SY0-701 YouTube course: 2 to 3 videos per week. That is it. Do not binge. Spaced learning at this pace retains significantly more than a weekend marathon.',
-        'One domain per 10 days. Do not move on until you can explain the key concepts in that domain out loud without notes. Speed is not the goal here.',
+        'Professor Messer\'s free SY0-701 YouTube course: 2 to 3 videos per week. That is it. Do not binge. Spaced learning at this pace sticks better than a weekend marathon.',
+        'One domain per 10 days. Do not move on until you can explain the key concepts in that domain out loud without notes. Taking your time here pays off later.',
         'Anki flashcards: 10 new cards per day, daily review. The daily review takes under 10 minutes once you are in the habit. Do not skip the review — this is where retention actually happens.',
       ]},
       {l:'PHASE 2: WKS 6–10 — PRACTICE',f:'Application is where knowledge becomes exam-ready',ts:[
@@ -692,18 +692,91 @@ const PLANS={
       {p:'',t:'<strong>End of Week 12:</strong> Practice exam scores consistently above 68%. Below that and a 16-week timeline may need extending — better to add two weeks than to sit an exam you are not ready for.'},
       {p:'',t:'<strong>Readiness signal:</strong> 80%+ on two consecutive full exams, no domain consistently below 65%. Book then.'},
     ],
-    warn:'<strong>Steady-state drift problem:</strong> Letting gaps between sessions stretch to a week or more. The Anki deck fixes this — 10 minutes daily keeps everything accessible even on weeks when you cannot do a full session.',
+    warn:'<strong>Steady-state drift problem:</strong> Letting gaps between sessions stretch to a week or more. The Anki deck helps — 10 minutes daily keeps everything fresh even on weeks when you cannot do a full session.',
     resources:[
-      {label:'FREE VIDEO',name:'Professor Messer SY0-701',url:'https://www.professormesser.com/sy0-701-certification-course/',note:'2 to 3 videos per week — pace yourself deliberately, do not binge'},
+      {label:'FREE VIDEO',name:'Professor Messer SY0-701',url:'https://www.professormesser.com/sy0-701-certification-course/',note:'2 to 3 videos per week. Slow and steady wins here, do not try to binge.'},
       {label:'FREE ANKI',name:'Josh Madakor Anki Deck',url:'https://lognpacific.com/free-certification-practice-tests/free-security-sy0-701-practice-questions/',note:'10 minutes daily — the single most important habit for low-hour study plans'},
       {label:'FREE PRACTICE',name:'Crucial Exams',url:'https://crucialexams.com/exams/comptia/security/sy0-701/',note:'Domain filtering lets you focus limited time precisely where it matters most'},
       {label:'FREE PRACTICE',name:'ExamCompass',url:'https://www.examcompass.com/',note:'Secondary free question source for Phase 3 variety'},
-      {label:'FREE HANDS-ON',name:'TryHackMe',url:'https://tryhackme.com',note:'2 to 3 rooms per week — free tier is enough for PBQ preparation'},
+      {label:'FREE HANDS ON',name:'TryHackMe',url:'https://tryhackme.com',note:'2 to 3 rooms per week — free tier is enough for PBQ preparation'},
       {label:'COMMUNITY',name:'r/CompTIA',url:'https://reddit.com/r/CompTIA',note:'Weekly threads keep you connected to what the exam is actually testing right now'},
       {label:'PAID OPTIONAL',name:'Jason Dion Practice Exams',url:'https://www.udemy.com/course/comptia-security-sy0-701-practice-exams/',note:'Add in Phase 3 for a fresh question pool — Udemy sale prices make this worth it'},
     ],
   },
 };
+
+// Resource pools for personalization based on diagnostic answers
+const RESOURCE_POOLS = {
+  // For retention and organization learners
+  mental_models: [
+    {label:'FREE VIDEO',name:'Pete Zerger Security+',url:'https://www.youtube.com/@PeteZerge',note:'Breaks concepts into mental models. Good if you find yourself forgetting things a few days after studying them.'}
+  ],
+  // For application/scenario question struggles
+  application: [
+    {label:'FREE YOUTUBE',name:'Cyber James Security+',url:'https://www.youtube.com/results?search_query=cyber+james+security+plus',note:'Focuses on elimination technique for scenario questions. Can add several points to your score.'}
+  ],
+  // For PBQ concerns
+  pbq_support: [
+    {label:'FREE PBQ',name:'CyberkraftYT PBQ Walkthrough',url:'https://www.youtube.com/results?search_query=cyberkraft+security+plus+pbq',note:'Free walkthroughs of actual PBQ types. Start here if performance questions feel unfamiliar.'}
+  ],
+  // For exam day prep
+  exam_dry_run: [
+    {label:'PAID SIM',name:'CompTIA CertMaster Practice',url:'https://www.comptia.org/training/resources/practice-tests',note:'Closest to the actual exam interface. Use in the final 2 weeks to get comfortable with the format.'}
+  ],
+  // For reading/text-based learners
+  books: [
+    {label:'PAID BOOK',name:'Darril Gibson GCGA',url:'https://www.amazon.com/CompTIA-Security-Certified-Ahead-SY0-701/dp/126526773X',note:'Straightforward explanations. Skim the chapters on weak domains, read the summaries first.'}
+  ],
+  // For hands-on learners
+  labs: [
+    {label:'FREE LABS',name:'CyberDefenders',url:'https://cyberdefenders.org',note:'Free blue team challenges. Good practice for Operations domain PBQs especially.'}
+  ]
+};
+
+// Build personalized resources based on diagnostic answers
+function getPersonalizedResources(ans) {
+  const resources = [];
+  const addedUrls = new Set();
+
+  // Pete Zerger: for retention issues, organization struggles, or beginners
+  if (ans.str === 'ret' || ans.str === 'org' || ans.exp === 0 || ans.con === 0) {
+    resources.push(...RESOURCE_POOLS.mental_models);
+  }
+
+  // Cyber James: for application struggles (know concepts, miss scenario questions)
+  if (ans.str === 'app') {
+    resources.push(...RESOURCE_POOLS.application);
+  }
+
+  // PBQ support: for those unsure about performance questions
+  if (ans.pbq === 0 || ans.pbq === 1) {
+    resources.push(...RESOURCE_POOLS.pbq_support);
+  }
+
+  // CertMaster trial: for retakers or those with exam day concerns
+  if (ans.retake === 2 || ans.pe <= 1) {
+    resources.push(...RESOURCE_POOLS.exam_dry_run);
+  }
+
+  // Books: for reading preference learners
+  if (ans.h_r || (ans.exp === 0 && !ans.h_v)) {
+    resources.push(...RESOURCE_POOLS.books);
+  }
+
+  // Labs: for hands-on preference or Operations weakness
+  if (ans.h_l || ans.d4) {
+    resources.push(...RESOURCE_POOLS.labs);
+  }
+
+  // Remove duplicates by URL
+  const unique = resources.filter(r => {
+    if (addedUrls.has(r.url)) return false;
+    addedUrls.add(r.url);
+    return true;
+  });
+
+  return unique;
+}
 
 let qIdx=0,answers={},selected=[];
 
@@ -854,12 +927,16 @@ function buildResults(){
 
   document.getElementById('warnStrip').innerHTML=p.warn;
 
-  // Resources section — built from p.resources which exists on every plan
+  // Get personalized resources based on answers
+  const personalized = getPersonalizedResources(answers);
+  const allResources = [...p.resources, ...personalized];
+
+  // Resources section — combines plan base resources with personalized additions
   const recsHtml=`
     <div class="results-panel" style="margin-top:16px">
-      <div class="rp-title">WHAT TO OPEN TOMORROW MORNING — VERIFIED RESOURCES</div>
+      <div class="rp-title">RESOURCES FOR YOUR SITUATION</div>
       <div class="resources-grid">
-        ${p.resources.map(r=>`
+        ${allResources.map(r=>`
           <a href="${r.url}" target="_blank" style="text-decoration:none">
             <div class="resource-card">
               <div class="rc-label">${r.label}</div>
